@@ -75,6 +75,8 @@ h6 {
 	font-weight: 400;
 }
 /*--------------------*/
+/* шаблон для адаптива */
+
 $maxWidth: 1440;
 @mixin adaptiv-font($pcSize, $mobSize) {
 	$addSize: $pcSize - $mobSize;
