@@ -440,7 +440,7 @@ body {
 }
 @media (max-width: 385px) {
 	.cook__btn {
-		margin: -19px 0 0 268px;
+		margin: -25px 0 0 268px;
 		width: 92px;
 		height: 50px;
 	}
