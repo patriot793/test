@@ -6,15 +6,19 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
+		body {
+			margin: 0 auto;
+		}
+
 		.slider {
 			max-width: 50%;
-
+			border: 5px solid #aaa;
 			position: relative;
-
+			overflow: hidden;
 			margin: auto;
 			height: 300px;
 
-			counter-reset: slide;
+
 
 		}
 
@@ -24,6 +28,7 @@
 			object-fit: cover;
 			width: 100%;
 			height: 300px;
+
 		}
 
 
@@ -47,7 +52,7 @@
 
 		.container .next {
 			width: 20px;
-			margin: -445px 0 0 1950px;
+			margin: -300px 0 0 1470px;
 			right: 50;
 			background-image: url(/img/svg/right.svg);
 			background-repeat: no-repeat;
@@ -56,24 +61,27 @@
 		}
 
 		.container .previous {
-			margin: -445px 0 0 550px;
+			margin: -300px 0 0 400px;
 			right: 50;
 			background-image: url(/img/svg/left.svg);
 			background-repeat: no-repeat;
 		}
 
 
-		.container .previous:hover,
-		.container .next:hover {}
+		.container .previous:active,
+		.container .next:active {
+			background-image: none;
+			transition-timing-function: ease;
+		}
 
 
 
 		.slider .item {
+			overflow: hidden;
 
-			counter-increment: slide;
 		}
 
-		.slider__item>div::before {
+		.slider__item::before {
 			content: counter(slide);
 			position: absolute;
 			top: 10px;
@@ -99,7 +107,7 @@
 			background-color: #ddd;
 			border-radius: 50%;
 			display: inline-block;
-			transition: background-color 0.6s ease;
+
 		}
 
 		.active,
@@ -111,49 +119,55 @@
 			width: 100%;
 			height: 300px;
 
+
 		}
+
+		.content {}
 	</style>
 	<title>Document</title>
 </head>
 
 <body>
 	<div class="container">
+		<div class="content">
 
-		<div class="slider">
-
-
-			<div class="item active">
-				<img src="/img/Slide1.jpg">
-			</div>
+			<div class="slider" id="slider">
 
 
-			<div class="item">
-				<img src="/img/Slide2.jpg">
-			</div>
+				<div class="item active">
+					<img src="/img/Slide1.jpg">
+				</div>
 
 
-			<div class="item">
-				<img src="/img/Slide4.jpg">
-			</div>
-			<div class="item">
-				<img src="/img/Slide5.jpg">
-			</div>
-			<div class="item">
-				<img src="/img/Slide6.jpg">
-			</div>
-			<div class="item">
-				<img src="/img/Slide7.jpg">
-			</div>
-			<div class="item">
-				<img src="/img/Slide8.jpg">
-			</div>
-			<div class="item">
-				<img src="/img/Slide9.jpg">
-			</div>
-			<div class="item">
-				<img src="/img/Slide10.jpg">
-			</div>
+				<div class="item">
+					<img src="/img/Slide2.jpg">
+				</div>
 
+				<div class="item">
+					<img src="/img/Slide3.jpg">
+				</div>
+				<div class="item">
+					<img src="/img/Slide4.jpg">
+				</div>
+				<div class="item">
+					<img src="/img/Slide5.jpg">
+				</div>
+				<div class="item">
+					<img src="/img/Slide6.jpg">
+				</div>
+				<div class="item">
+					<img src="/img/Slide7.jpg">
+				</div>
+				<div class="item">
+					<img src="/img/Slide8.jpg">
+				</div>
+				<div class="item">
+					<img src="/img/Slide9.jpg">
+				</div>
+				<div class="item">
+					<img src="/img/Slide10.jpg">
+				</div>
+			</div>
 
 
 		</div>
@@ -180,14 +194,18 @@
 	<script>
 		let dots = document.getElementsByClassName("slider-dots_item");
 
+
+
 		let slideIndex = 1;
 
 		showSlides(slideIndex);
 
 
 
+
 		function nextSlide() {
 			showSlides(slideIndex += 1);
+
 		}
 
 
@@ -207,7 +225,6 @@
 
 
 			if (n > slides.length) {
-				slideIndex = 1
 			}
 			if (n < 1) {
 				slideIndex = slides.length
@@ -216,13 +233,48 @@
 			for (i = 0; i < slides.length; i++) {
 				slides[i].style.display = "none";
 			}
+
 			for (i = 0; i < dots.length; i++) {
 				dots[i].className = dots[i].className.replace(" active", "");
+
+
+
 			}
 			slides[slideIndex - 1].style.display = "block";
 			dots[slideIndex - 1].className += " active";
-			setTimeout(autoSlider, 600);
+			//setInterval(nextSlide, 3000);
+			let start = Date.now() + 2100; // запомнить время начала
+			//let end = Date.now() - 2000;
+
+			let timer = setInterval(function () {
+				// сколько времени прошло с начала анимации?
+				//isLeftToRight = 1 - isLeftToRight;
+				let timePassed = Date.now() - start;
+				//if (isLeftToRight) slider.style.left = timePassed / 5 + 'px';
+				//else slider.style.left = (startPosition - timePassed / 5) + 'px';
+				if (timePassed >= 0) {
+					clearInterval(timer);
+
+					// закончить анимацию через 2 секунды
+					return;
+				}
+
+
+
+				// отрисовать анимацию на момент timePassed, прошедший с начала анимации
+				draw(timePassed);
+
+			}, 1);
 		}
+		// в то время как timePassed идёт от 0 до 2000
+		// left изменяет значение от 0px до 400px
+		function draw(timePassed) {
+			slider.style.right = timePassed / 10 + 'px';
+
+
+		}
+
+
 
 
 
