@@ -243,31 +243,28 @@
 			slides[slideIndex - 1].style.display = "block";
 			dots[slideIndex - 1].className += " active";
 			//setInterval(nextSlide, 3000);
-			let start = Date.now() + 2100; // запомнить время начала
-			//let end = Date.now() - 2000;
+			let start = Date.now() + 2100;
+
 
 			let timer = setInterval(function () {
-				// сколько времени прошло с начала анимации?
-				//isLeftToRight = 1 - isLeftToRight;
+
 				let timePassed = Date.now() - start;
-				//if (isLeftToRight) slider.style.left = timePassed / 5 + 'px';
-				//else slider.style.left = (startPosition - timePassed / 5) + 'px';
+
 				if (timePassed >= 0) {
 					clearInterval(timer);
 
-					// закончить анимацию через 2 секунды
+
 					return;
 				}
 
 
 
-				// отрисовать анимацию на момент timePassed, прошедший с начала анимации
+
 				draw(timePassed);
 
 			}, 1);
 		}
-		// в то время как timePassed идёт от 0 до 2000
-		// left изменяет значение от 0px до 400px
+
 		function draw(timePassed) {
 			slider.style.right = timePassed / 10 + 'px';
 
