@@ -80,31 +80,54 @@ h6 {
 	/*url(/fonts/ProximaNova-Regular.ttf);*/
 }
 body {
-	/*width: 1600px;
-	height: 100%;
-	/*margin: 0px auto;*/
+	/*max-width: 1600px;
+	height: 100%;*/
+	margin: 0px auto;
 }
 
 .wrapper {
 	display: flex;
+	min-width: 100%;
+	margin: 0 auto;
+	/*background: url(/img/Polygon\ Background.png) 0px 0px no-repeat;*/
 }
 .container {
-	width: 1600px;
 	background: url(/img/Polygon\ Background.png) 0px 0px no-repeat;
+	width: 1600px;
+	flex: 0 1 auto;
 	margin: 0px auto;
 }
-@media (max-width: 1440px) {
-	.wrapper {
-		max-width: 1300px;
+@media (max-width: 1500px) {
+	.content {
+		max-width: 1200px;
+		margin: 0px 0px 0 0px;
+	}
+}
+@media (max-width: 1250px) {
+	.content {
+		max-width: 978px;
+		margin: 0px 0 0 0px;
+	}
+}
+@media (max-width: 992px) {
+	.content {
+		max-width: 750px;
+		margin: 0px 0 0 0px;
+	}
+}
+@media (max-width: 767px) {
+	.content {
+		max-width: 375px;
+		margin: 0px 0 0 0px;
 	}
 }
 .content {
+	width: 1600px;
 	display: flex;
 	margin: 0px auto;
 }
 
 .header {
-	width: 100%;
 	display: flex;
 	margin: 0 auto;
 }
@@ -123,6 +146,11 @@ body {
 .header__list {
 	display: flex;
 	flex-direction: row;
+}
+@media (max-width: 767px) {
+	.header__list {
+		display: none;
+	}
 }
 li {
 	font-family: ProximaNova;
@@ -538,6 +566,7 @@ h1 {
 	text-transform: uppercase;
 }
 .prod {
+	position: relative;
 }
 .prod__columns {
 	display: flex;
@@ -809,10 +838,12 @@ li {
 }
 .b-container {
 	position: absolute;
+	top: 2700px;
+	left: 950px;
 	width: 600px;
 	height: 145px;
 	background-color: transparent;
-	margin: 2700px 0 0 950px;
+
 	padding: 10px;
 	font-family: Raleway;
 	font-size: 16.5px;
@@ -851,7 +882,7 @@ span {
 	top: 0px;
 }
 .b-popup .b-popup-content {
-	margin: 240px auto 0px auto;
+	margin: 240px auto;
 	width: 700px;
 	height: 440px;
 	padding: 10px;
