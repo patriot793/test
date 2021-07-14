@@ -1,9 +1,9 @@
 $(document).ready(function () {
 	$('.slider').slick({
-		arrows: true,
+		arrows: false,
 		dots: true,
 		vertical: true,
 	});
-
+	$('.navburger, #nav').addClass('active');
 });
 
