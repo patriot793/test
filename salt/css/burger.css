@@ -75,10 +75,9 @@ h6 {
 /*--------------------*/
 
 .header {
-	position: absolute;
-	width: 100%;
-	top: 0;
-	left: 0px;
+	position: static;
+	width: 1600px;
+	margin: -130px 0px 0 0;
 	z-index: 8;
 	border: 2px solid black;
 }
@@ -104,11 +103,11 @@ h6 {
 .header__logo {
 	flex: 0 0 100px;
 	position: relative;
-	margin: 9px 0 0 264px;
+	margin: 15px 0 0 214px;
 	z-index: 3;
 }
 .header__logo a:hover {
-	display: none;
+	/*display: none;*/
 	border: none;
 }
 
@@ -124,9 +123,13 @@ h6 {
 .header__list {
 	display: flex;
 	position: relative;
-	margin: 29px 150px 0 0;
+	margin: 35px 240px 0 0;
 	z-index: 2;
 }
+.header__list a:hover {
+	border-bottom: orchid;
+}
+
 .header__list li {
 	list-style: none;
 	margin: 0 0 0 24px;
@@ -143,28 +146,34 @@ h6 {
 	text-align: right;
 	color: #ffffff;
 }
-li:hover {
+.header__link li:hover {
 	width: 53px;
 	height: 3px;
 
 	border-bottom: 3px solid #ff8b00;
 }
-@media (max-width: 767px) {
+@media (max-width: 769px) {
 	body.lock {
 		overflow: hidden;
+	}
+	.header {
+		position: fixed;
+		background-color: #7050e5;
 	}
 	.header__body {
 		height: 60px;
 	}
 	.header__logo {
-		flex: 0 0 40px;
+		flex: 0 0 35px;
+		margin: -3px 0 0 15px;
 	}
 	.header__burger {
 		display: block;
-		position: relative;
+		position: fixed;
+		right: 15px;
 		width: 30px;
 		height: 20px;
-		position: relative;
+
 		z-index: 5;
 	}
 	.header__burger span {
