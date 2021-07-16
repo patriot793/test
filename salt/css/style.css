@@ -94,7 +94,6 @@ body {
 .content {
 	display: flex;
 	flex-direction: column;
-	flex: 0 1 auto;
 
 	margin: 0 auto;
 }
@@ -127,7 +126,6 @@ body {
 
 .about {
 	display: flex;
-	flex: 0 1 50%;
 
 	margin: 136px 0 0 0px;
 }
@@ -139,7 +137,7 @@ body {
 .about__columns {
 	min-width: 1600px;
 	display: flex;
-	flex: 0 1 50%;
+
 	margin: -15px 0 0 370px;
 }
 @media (max-width: 769px) {
@@ -280,7 +278,6 @@ h1 {
 .info__columns {
 	display: flex;
 	margin: 207px 0 0 357px;
-	flex: 0 1 33.333%;
 }
 @media (max-width: 769px) {
 	.info__columns {
@@ -391,7 +388,6 @@ h1 {
 	display: flex;
 	margin: 92px 0 0 318px;
 	flex-direction: column;
-	flex: 1 1 33.333%;
 }
 @media (max-width: 769px) {
 	.what__columns {
@@ -401,7 +397,6 @@ h1 {
 }
 .what__head {
 	display: flex;
-	flex: 0 1 33.333%;
 }
 @media (max-width: 769px) {
 	.what__head {
@@ -624,7 +619,6 @@ h1 {
 .what__foot {
 	display: flex;
 	margin: 40px 0 0 12px;
-	flex: 0 1 33.333%;
 }
 @media (max-width: 769px) {
 	.what__foot {
@@ -1197,7 +1191,7 @@ h1 {
 .footer__cont {
 	font-family: ProximaNova;
 	font-size: 14px;
-	font-weight: semibold;
+	font-weight: 500;
 	font-stretch: normal;
 	font-style: normal;
 	line-height: 1.71;
