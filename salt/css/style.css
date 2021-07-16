@@ -144,6 +144,7 @@ body {
 }
 @media (max-width: 769px) {
 	.about__columns {
+		width: 100%;
 		margin: 20px auto;
 	}
 }
@@ -202,7 +203,7 @@ body {
 }
 @media (max-width: 769px) {
 	.about__right {
-		/*display: none;*/
+		display: none;
 	}
 }
 .about__logo {
@@ -273,7 +274,7 @@ h1 {
 }
 @media (max-width: 769px) {
 	.info {
-		margin: 450px auto;
+		margin: 250px auto;
 	}
 }
 .info__columns {
