@@ -1,6 +1,6 @@
 
 
-$('a[href^="#"').on('click', function () {
+$('a[href^="#what"').on('click', function () {
 
 	let href = $(this).attr('href');
 

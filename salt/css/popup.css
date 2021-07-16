@@ -17,7 +17,7 @@
 }
 .popup:target .popup__content {
 	transform: translate(0px, 0%) perspective(600px) rotate(0deg);
-	opacity: 5;
+	opacity: 3;
 }
 .popup__body {
 	min-height: 100%;
@@ -27,21 +27,23 @@
 	padding: 30px 10px;
 }
 .popup__content {
-	background-color: #fff;
-	color: #000;
-	min-width: 800px;
+	background-color: #7050e5;
+	color: #ff8b00;
+	width: 700px;
+	height: 500px;
 	padding: 30px;
 	position: relative;
 	transform: translate(0px, -100%) perspective(600px) rotatex(45deg);
 	opacity: 0;
 	transition: all 0.8s ease 0s;
+	text-align: center;
 }
 .popup__close {
 	position: absolute;
 	right: 10px;
 	top: 10px;
-	font-size: 20px;
-	color: #000;
+	font-size: 50px;
+	color: #ff8b00;
 	text-decoration: none;
 }
 .popup__title {
@@ -49,4 +51,12 @@
 	margin: 0 0 1em 0;
 }
 .popup__text {
+	display: flex;
+	justify-content: center;
+	width: 600px;
+	margin: 0px auto;
+	font-size: 50px;
+}
+.prod__phone {
+	background: url(/img/Play\ Icon.png) no-repeat;
 }
