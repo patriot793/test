@@ -71,13 +71,13 @@
 @media (max-width: 769px) {
 	.prod__phone {
 		width: 100px;
-		height: 100px;
-		margin: 0 auto;
+		height: 300px;
+		margin: 30px auto;
 		position: absolute;
-
-		top: 50;
+		padding: 0 0 30px 0;
+		bottom: 0;
 		left: 700px;
-		transform: scale(3);
+		transform: scale(2);
 		background: url(/img/Play\ Icon.png) 10px 90px no-repeat;
 	}
 }
