@@ -1,5 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 3 version
+*/
+
 .slick-track {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 }
 .slick-list {
@@ -15,8 +27,14 @@
 }
 @media (max-width: 769px) {
 	.slider {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
 		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
 		align-items: center;
 		position: absolute;
 		left: 0;
@@ -31,6 +49,7 @@
 }
 
 .slider__item img {
+	-o-object-fit: cover;
 	object-fit: cover;
 }
 .slider__item {
@@ -47,7 +66,12 @@
 	list-style: none;
 }
 .slider .slick-dots {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 	list-style: none;
 	margin: -192px 0 0 445px;

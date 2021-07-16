@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 3 version
+*/
+
 .popup {
 	position: fixed;
 	width: 100%;
@@ -9,6 +16,8 @@
 	visibility: hidden;
 	overflow-y: auto;
 	overflow-x: hidden;
+	-webkit-transition: all 0.8s ease 0s;
+	-o-transition: all 0.8s ease 0s;
 	transition: all 0.8s ease 0s;
 }
 .popup:target {
@@ -16,13 +25,20 @@
 	visibility: visible;
 }
 .popup:target .popup__content {
+	-webkit-transform: translate(0px, 0%) perspective(600px) rotate(0deg);
 	transform: translate(0px, 0%) perspective(600px) rotate(0deg);
 	opacity: 3;
 }
 .popup__body {
 	min-height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	padding: 30px 10px;
 }
@@ -33,8 +49,11 @@
 	height: 500px;
 	padding: 30px;
 	position: relative;
+	-webkit-transform: translate(0px, -100%) perspective(600px) rotatex(45deg);
 	transform: translate(0px, -100%) perspective(600px) rotatex(45deg);
 	opacity: 0;
+	-webkit-transition: all 0.8s ease 0s;
+	-o-transition: all 0.8s ease 0s;
 	transition: all 0.8s ease 0s;
 	text-align: center;
 }
@@ -52,7 +71,11 @@
 	margin: 0 0 1em 0;
 }
 .popup__text {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	width: 600px;
 	margin: 0px auto;
@@ -61,6 +84,10 @@
 .prod__phone {
 	position: absolute;
 	top: 50;
+
+	display: -webkit-box;
+
+	display: -ms-flexbox;
 
 	display: flex;
 	width: 300px;
@@ -77,6 +104,8 @@
 		padding: 0 0 30px 0;
 		bottom: 0;
 		left: 700px;
+		-webkit-transform: scale(2);
+		-ms-transform: scale(2);
 		transform: scale(2);
 		background: url(/img/Play\ Icon.png) 10px 90px no-repeat;
 	}
