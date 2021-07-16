@@ -927,6 +927,11 @@ h1 {
 .prod__script {
 }
 .prod__phone {
+	position: absolute;
+	top: 50;
+	display: flex;
+	width: 300px;
+	height: 300px;
 }
 .popup-link {
 }

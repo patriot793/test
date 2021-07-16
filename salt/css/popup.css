@@ -59,5 +59,11 @@
 	font-size: 50px;
 }
 .prod__phone {
+	margin: 200px 0 0 330px;
 	background: url(/img/Play\ Icon.png) no-repeat;
+}
+@media (max-width: 769px) {
+	.prod__phone {
+		transform: scale(3);
+	}
 }
