@@ -1,0 +1,81 @@
+.slick-track {
+	display: flex;
+	flex-direction: column;
+}
+.slick-list {
+	overflow: hidden;
+}
+.slider {
+	position: static;
+	top: 285px;
+	left: 1200px;
+	width: 300px;
+	height: 100%;
+	margin: 0 0 0 0px;
+}
+@media (max-width: 769px) {
+	.slider {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 500px;
+		left: 0;
+		width: 100%;
+		margin: 0 auto;
+
+		background-color: #7050e5b6;
+
+		margin: 300px auto;
+		text-align: center;
+	}
+}
+
+.slider__item img {
+	object-fit: cover;
+}
+.slider__item {
+	width: 300px;
+	height: 100%;
+	padding: 30px;
+}
+.slider .slick-arrow {
+	display: none;
+	font-size: 0;
+}
+.slick-dots {
+	font-size: 0;
+	list-style: none;
+}
+.slider .slick-dots {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	margin: -192px 0 0 445px;
+}
+.slider .slick-dots [role] {
+	list-style: none;
+}
+.slider .slick-dots li {
+	list-style: none;
+
+	padding: 15px;
+	margin: 5px;
+	background: url(/img/Polygon\ 1\ copy.png) 0 0 / 70% no-repeat;
+}
+/* Активная точка */
+.slick-dots li.slick-active {
+	list-style: none;
+
+	background: url(/img/Polygon\ 1\ copy\ 2.png) 0 0 /70% no-repeat;
+}
+/* Элемент точки */
+.slider .slick-dots li .slick-active button {
+	font-size: 0;
+	list-style: none;
+}
+.slider .slick-dots button {
+	font-size: 0;
+	left: 0;
+	background: url(/img/Polygon\ 1\ copy.png) 0 0 / 100% no-repeat;
+}

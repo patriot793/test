@@ -27,8 +27,8 @@
 	padding: 30px 10px;
 }
 .popup__content {
-	background-color: #7050e5;
-	color: #ff8b00;
+	background-color: #7050e5b6;
+	color: #fff;
 	width: 700px;
 	height: 500px;
 	padding: 30px;
@@ -38,11 +38,12 @@
 	transition: all 0.8s ease 0s;
 	text-align: center;
 }
+
 .popup__close {
 	position: absolute;
 	right: 10px;
 	top: 10px;
-	font-size: 50px;
+	font-size: 20px;
 	color: #ff8b00;
 	text-decoration: none;
 }

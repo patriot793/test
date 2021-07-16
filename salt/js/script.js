@@ -4,6 +4,12 @@ $(document).ready(function () {
 		dots: true,
 		vertical: true,
 	});
-	$('.navburger, #nav').addClass('active');
+	/*window.addEventListener('resize'()=> {
+		if(document.documentElement.clientHeight < 789) {
+		console.log
+	}*/
+
 });
+$('.navburger, #nav').addClass('active');
+
 
